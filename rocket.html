@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-image: linear-gradient(rgb(22, 171, 221),rgba(38, 38, 221, 0.685));
+            background-color: black;
+            height: 100vh;
+            overflow: hidden;
+         
+        }
+        
+        .img1
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin-left: 0;
+            margin-top: 0;
+            height: 300px;
+            width: 300px;
+            animation-name: myanim;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            z-index: 100;
+            
+        }
+        @keyframes myanim
+        {
+            0%
+            {
+                margin-top: 0vh;
+                margin-left: -1vw;
+                
+            }
+            50%
+            {
+                margin-top: 0vh;
+                margin-left: 1vw;
+               
+            }
+            100%
+            {
+                margin-top: 0vh;
+                margin-left: -1vw;
+                
+            }
+
+        }
+        
+        .cloud1 
+        {
+            height: 350px;
+            width: 350px;
+            animation-name: myanim1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            margin-top: -200vh;
+            animation-delay: 1s;
+
+        }
+        .cloud2
+        {
+            height: 350px;
+            width: 350px;
+            animation-name: myanim2;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            margin-top: -200vh;
+            margin-left: 70vw;
+            animation-delay: 2s;
+        }
+        .cloud3 
+        {
+            height: 350px;
+            width: 350px;;
+            animation-name: myanim3;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            margin-top: -200vh;
+            margin-left: 35vw;
+            animation-delay: 3s;
+        }
+        @keyframes myanim1
+        {
+            0%
+            {
+                top: -200vh;
+                
+            }
+            100%
+            {
+                margin-top: 100vh;
+                
+            }
+            
+
+        }
+        @keyframes myanim2
+        {
+            0%
+            {
+                top: -200vh;
+                
+            }
+            100%
+            {
+                margin-top: 100vh;
+                
+            }
+            
+
+        }@keyframes myanim3
+        {
+            0%
+            {
+                top: -200vh;
+                
+            }
+            100%
+            {
+                margin-top: 100vh;
+                
+            }
+            
+
+        }
+        .moon
+        {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(230, 245, 21);
+            border-radius: 50%;
+            z-index: -1;
+            margin-left: 30vw;
+            margin-top: 10vh;
+            box-shadow: 0px 0px 150px  rgb(218, 206, 39) ,5px 5px 150px  rgb(218, 206, 39),-5px 0px 150px  rgb(218, 206, 39), 0px 0px 150px rgb(218, 206, 39);
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <img class="img1" src="./78837024_810780799350068_6839101095160053760_n.png" alt="">
+        <div class="cloud">
+            <img class="cloud1" src="./73189952_1680553118736377_7558358815586910208_n.png" alt="">
+            <img class="cloud2" src="./73189952_1680553118736377_7558358815586910208_n.png" alt="">
+            <img class="cloud3" src="./73189952_1680553118736377_7558358815586910208_n.png" alt="">
+            <div class="moon">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('mousemove',function(e){
+        const all = document.querySelector('img');
+        all.style.left= e.pageX+'px';
+        all.style.top=e.pageY+'px';
+    });
+</script>
+</body>
+</html>
